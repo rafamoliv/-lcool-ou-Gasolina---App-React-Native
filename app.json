@@ -20,13 +20,13 @@
       "bundleIdentifier": "com.rodeveloper.alcoolgasolina",
       "supportsTablet": true,
       "config": {
-        "googleMobileAdsAppId": "ca-app-pub-3940256099942544~1458002511"
+        "googleMobileAdsAppId": "ca-app-pub-2851827333967207~4092806998"
       }
     },
     "android": {
       "package": "com.rodeveloper.alcoolgasolina",
       "config": {
-        "googleMobileAdsAppId": "ca-app-pub-3940256099942544~3347511713"
+        "googleMobileAdsAppId": "ca-app-pub-2851827333967207~4092806998"
       },
       
       "adaptiveIcon": {

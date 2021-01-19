@@ -1,16 +1,18 @@
 import React from "react";
-import { Container, Footer } from "./src/assets/app";
+import { Container, Footer, Top } from "./src/assets/app";
 import BannerTOP from "./src/components/BannerTOP";
 import BannerDOWN from "./src/components/BannerDown";
-import Routes from "./src/Routes";
+import Landing from "./src/pages/Landing";
 
 export default function App() {
   return (
     <>
       <Container>
-        <BannerTOP />
+        <Top>
+          <BannerTOP />
+        </Top>
 
-        <Routes />
+        <Landing />
 
         <Footer>
           <BannerDOWN />
