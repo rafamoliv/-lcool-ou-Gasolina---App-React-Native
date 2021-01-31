@@ -2,7 +2,7 @@
   "expo": {
     "name": "Álcool ou Gasolina?",
     "slug": "alcool-gasolina",
-    "version": "2.0.1",
+    "version": "1.1.2",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "splash": {
@@ -25,6 +25,7 @@
     },
     "android": {
       "package": "com.rodeveloper.alcoolgasolina",
+      "versionCode": 2,
       "config": {
         "googleMobileAdsAppId": "ca-app-pub-2851827333967207~4092806998"
       },
