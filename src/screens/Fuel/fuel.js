@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Alcool, Container, ContainerBase, Custo, Logo, Resultado, Texto, TextoPadrao } from "./styled";
 import AG from "../../assets/icon.png";
 
-export default function Landing() {
+export const Fuel = () => {
   const [etanol, setEtanol] = useState(0);
   const [fuel, setFuel] = useState(0);
 
@@ -10,8 +10,10 @@ export default function Landing() {
   const y = parseFloat(fuel);
   const result = x / y;
 
-  function bestFuel(result) {
-    if (result <= 0.73) {
+  function takeBestFuel(result) {
+    if (result === undefined) {
+      return <Resultado>Insere um valor</Resultado>;
+    } else if (result <= 0.73) {
       return <Resultado>Álcool</Resultado>;
     } else {
       return <Resultado>Gasolina</Resultado>;
@@ -26,17 +28,17 @@ export default function Landing() {
         <ContainerBase>
           <Alcool>
             <Texto>Álcool R$</Texto>
-            <Custo keyboardType="decimal-pad" placeholder="3.59" value={etanol} onChangeText={setEtanol} />
+            <Custo keyboardType="decimal-pad" placeholder="3.59" onChangeText={setEtanol} />
           </Alcool>
           <Alcool>
             <Texto>Gasolina R$</Texto>
-            <Custo keyboardType="decimal-pad" placeholder="4.97" value={fuel} onChangeText={setFuel} />
+            <Custo keyboardType="decimal-pad" placeholder="4.97" onChangeText={setFuel} />
           </Alcool>
         </ContainerBase>
 
         <TextoPadrao>O melhor para abastecer neste posto é:</TextoPadrao>
-        <Resultado>{bestFuel(result)}</Resultado>
+        <Resultado>{takeBestFuel(result)}</Resultado>
       </Container>
     </>
   );
-}
+};
